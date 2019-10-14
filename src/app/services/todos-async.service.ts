@@ -26,7 +26,7 @@ export class TodosAsyncService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'X-Customm-Header': 'custom-value-here',
+      'X-Custom-Header': 'custom-value-here',
       Authorization: 'my-token'
     })
   };
@@ -36,14 +36,14 @@ export class TodosAsyncService {
   addTodo(content: string): Observable<number> {
     return this.client
       .post<AddResult>(this.url, content, this.httpOptions)
-      .pipe(map(result => result.id));
+      .pipe(map((result: AddResult) => result.id));
   }
 
   removeTodo(id: number): Observable<boolean> {
     const deleteUrl = this.url + '/' + id;
     return this.client
       .delete<DeleteResult>(deleteUrl, this.httpOptions)
-      .pipe(map(result => result.result));
+      .pipe(map((result: DeleteResult) => result.result));
   }
 
   getTodos(): Observable<Todo[]> {
