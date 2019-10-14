@@ -1,12 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 import { AppComponent } from './app.component';
+import { CommentsComponent } from './comments/comments.component';
 import { CounterComponent } from './counter/counter.component';
 import { PadStartPipe } from './pad-start-pipe/pad-start.pipe';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { AddTodoComponent } from './add-todo/add-todo.component';
-import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,11 @@ import { CommentsComponent } from './comments/comments.component';
     PadStartPipe,
     TodoListComponent,
     AddTodoComponent,
-    CommentsComponent
+    CommentsComponent,
+    ProductDetailsComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, RouterModule.forRoot([])],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
