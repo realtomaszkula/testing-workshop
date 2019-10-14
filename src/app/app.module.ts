@@ -10,6 +10,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { SmartCounterComponent } from './smart-counter/smart-counter.component';
 import { DumbCounterComponent } from './smart-counter/dumb-counter.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { DumbCounterComponent } from './smart-counter/dumb-counter.component';
     SmartCounterComponent,
     DumbCounterComponent
   ],
-  imports: [BrowserModule, RouterModule.forRoot([])],
+  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot([])],
   providers: [],
   bootstrap: [AppComponent]
 })
