@@ -8,6 +8,8 @@ import { CounterComponent } from './counter/counter.component';
 import { PadStartPipe } from './pad-start-pipe/pad-start.pipe';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { SmartCounterComponent } from './smart-counter/smart-counter.component';
+import { DumbCounterComponent } from './smart-counter/dumb-counter.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     TodoListComponent,
     AddTodoComponent,
     CommentsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    SmartCounterComponent,
+    DumbCounterComponent
   ],
   imports: [BrowserModule, RouterModule.forRoot([])],
   providers: [],
