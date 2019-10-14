@@ -6,6 +6,7 @@ import { CounterComponent } from './counter/counter.component';
 import { PadStartPipe } from './pad-start-pipe/pad-start.pipe';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
     CounterComponent,
     PadStartPipe,
     TodoListComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule
